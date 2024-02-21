@@ -196,3 +196,66 @@ El ejercicio 2 está configurado inicialmente para imprimir los ejemplos proporc
 <p align="center">
   <strong>python -m unittest test.py</strong>
 </p>
+<h2>Ejercicio 4.</h2>
+<h3>
+En un negocio reciben periódicamente productos para la venta, se requiere desarrollar un programa de consola (o
+terminal) que cumpla con los siguientes requerimientos:
+</h3>
+
+<p>
+1. Se requiere organizar el inventario en los siguientes grupos: dairy, cleaning y grain.<br>
+2. Cada grupo tiene que estar asociado a un elemento de otra lista que almacena las existencias de ese grupo en la
+misma posición, como en el siguiente ejemplo:<br>
+dairy_products = [“Fairlife Milk”, “Alta Dena Milk”, “Queensland Butter”]<br>
+dairy_stock = [28, 36, 50]<br>
+En donde, por ejemplo, el producto del grupo dairy “Alta Dena Milk” tiene una existencia de 36 unidades.
+3. Para un producto entrante, se debe poder registrar en el sistema: el nombre del producto, la cantidad y el grupo
+al que pertenece.<br>
+4. Si el producto no existe en la lista, se debe agregar al final con su cantidad entrante, pero si existe se debe
+actualizar el número de existencias sumando la nueva cantidad.<br>
+5. El programa debe permitir visualizar todo el inventario de productos y existencias.<br>
+<p>
+
+<p>Para ejecutar el archivo del ejercicio 4, abrimos una terminal y nos dirigimos a la ruta donde se encuentra el archivo, luego ejecutamos el siguiente comando:</p>
+
+<p align="center">
+  <strong>python Inventory.py</strong>
+</p>
+<p>
+  El ejercicio 4, por defecto, viene cargado con un inventario predefinido. Este inventario inicial incluye productos agrupados en categorías como productos lácteos, productos de limpieza y productos de grano, junto con sus respectivas cantidades disponibles. 
+</p>
+<p>El test de este ejercicio comprende tres casos de prueba: </p>
+
+<table align="center">
+  <thead>
+    <tr>
+      <th>Caso</th>
+      <th>Entrada</th>
+      <th>resultado esperado</th>
+    </tr>
+  </thead>
+  <tbody align="center">
+    <tr>
+      <td>test registar producto 1</td>
+      <td>register_product(1, "New Product", 10)</td>
+      <td>Se espera que los datos ingresados esten en las listas dairy_products y dairy_stock</td>
+    </tr>
+    <tr>
+      <td>test registar producto 2</td>
+      <td>register_product(2, "Limpia vidrios", 80)</td>
+      <td>Se espera que los datos ingresados esten en las listas cleaning_products y cleaning_stock</td>
+    </tr>
+    <tr>
+      <td>test registar producto 3</td>
+      <td>register_product(3, "Frijol", 90)</td>
+      <td>Se espera que los datos ingresados esten en las listas grain_stock y grain_products</td>
+    </tr>
+    <!-- Agrega más filas según sea necesario -->
+  </tbody>
+</table>
+<p>
+  Para ejecutar con éxito las pruebas unitarias del programa, es necesario comentar la llamada al método menu() en la función __init__(self) de la clase Inventory. Una vez realizada esta modificación, se puede proceder a ejecutar las pruebas desde la terminal mediante el siguiente comando.
+</p>
+<p align="center">
+  <strong>python -m unittest test_inventory.py</strong>
+</p>
