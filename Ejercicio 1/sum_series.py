@@ -13,7 +13,8 @@ def sum_serie(number, terms):
             #print(number)   
     return result
 
-
+print(sum_serie(3,5))
+print(sum_serie(5,3))
 
 
 
