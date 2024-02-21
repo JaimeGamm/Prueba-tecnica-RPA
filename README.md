@@ -143,3 +143,56 @@ El ejercicio 2 está configurado inicialmente para imprimir los ejemplos proporc
 <p align="center">
   <strong>python -m unittest test.py</strong>
 </p>
+<h2>Ejercicio 3.</h2>
+<h3>
+  Dada una lista de cualquier longitud de entrada, escriba una función para agrupar los elementos similares en una matriz
+  de salida (no importa el orden).
+</h3>
+<p>
+  Para ejecutar el archivo del ejercicio 3, abrimos una terminal y nos dirigimos a la ruta donde se encuentra el archivo, luego ejecutamos el siguiente comando: 
+</p>
+<p align="center">
+  <strong>python group_items.py</strong>
+</p>
+<p>
+  El ejercicio 3 está configurado inicialmente para imprimir los ejemplos proporcionados en el taller. Sin embargo, brinda la flexibilidad de modificar las entradas directamente mediante la modificación de listas, o llamando al método group_items(lista) para procesar una lista específica.
+</p>
+<p>El test de este ejercicio comprende cuatro casos de prueba</p>
+<table align="center">
+  <thead>
+    <tr>
+      <th>Número de Caso</th>
+      <th>Entrada lista</th>
+      <th>resultado esperado</th>
+    </tr>
+  </thead>
+  <tbody align="center">
+    <tr>
+      <td>1</td>
+      <td>[12, 25, 1, 1, 7, 25]</td>
+      <td>[[12], [25, 25], [1, 1], [7]]</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>[6, 7, 8, 9]</td>
+      <td>[[6], [7], [8], [9]]</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>[1, 1, 1, 1]</td>
+      <td>[[1, 1, 1, 1]]</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>[]</td>
+      <td>[]</td>
+    </tr>
+    <!-- Agrega más filas según sea necesario -->
+  </tbody>
+</table>
+<p>
+  Para ejercutar el test en la terminar escribimos el siguiente comando:
+</p>
+<p align="center">
+  <strong>python -m unittest test.py</strong>
+</p>
